@@ -1,0 +1,1 @@
+Sample Readme. You can see the latest movie information and read information about all the movies.
