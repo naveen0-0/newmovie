@@ -1,0 +1,14 @@
+.homepage{
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.sidebar_container{
+  background:linear-gradient(to bottom,#22232A,#191A1F);
+}
+
+.selected_component_container{
+  background:linear-gradient(to bottom,#22232A,#191A1F);
+  flex: 1;
+}
