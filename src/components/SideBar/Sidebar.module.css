@@ -1,7 +1,7 @@
 .sidebar{
   width: 200px;
   height: 100%;
-  border-right: 1px solid rgb(68, 68, 68);
+  /* border-right: 1px solid rgb(68, 68, 68); */
 }
 
 .apptitle{
@@ -12,6 +12,7 @@
   font-size: 24px;
   font-family: "Roboto";
   color: rgb(212, 212, 212);
+  position: relative;
 }
 
 .sidebarlink{
@@ -43,4 +44,23 @@
   flex: 1;
   padding: 10px;
   text-align: center;
+}
+
+.close{
+  display: none;
+}
+
+
+@media screen and (max-width:1000px){
+  .close{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%, -50%);
+  }
+  .closeimg{
+    width: 15px;
+    cursor: pointer;
+  }
 }

@@ -1,26 +1,49 @@
 .movies{
-  max-height: 100%;
-  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Fira Code";
 }
 
 .tabtitle{
   color: whitesmoke;
   font-size: 32px;
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-indent: 30px;
+  margin: 10px 0px;
+}
+
+.tabs{
+  /* background-color: #0d0d0e; */
+  background-color: #191a1f;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  font-size: 14px;
+}
+.tab{
+  text-align: center;
+  color: rgb(170, 170, 170);
+  cursor: pointer;
+}
+
+.tabactive{
+  text-align: center;
+  color: rgb(255, 231, 93);
+  cursor: pointer;
 }
 
 .content{
   background-color: #191a1f;
+  /* background-color: #0d0d0e; */
   padding: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px;
   flex: 1;
   color: rgb(126, 126, 126);
