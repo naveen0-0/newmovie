@@ -36,7 +36,12 @@ export default function FullMovie({ setIndex, movieId }) {
             <div className={styles.back}>
               <img src={bacimg} alt="Back" className={styles.back_img} onClick={() => setIndex(0)}/>
             </div>
-            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Poster"  className={styles.poster_img}/>
+
+            {movie.backdrop_path?(
+              <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Poster"  className={styles.poster_img}/>
+            ):(
+              <div className={styles.poster_unavailable} title={movie.title}>Poster Unavailable</div>
+            )}
           </div>
 
           <div className={styles.title}>

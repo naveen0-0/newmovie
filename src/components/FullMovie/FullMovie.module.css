@@ -119,6 +119,18 @@
   height: 100px;
 }
 
+.poster_unavailable{
+  cursor: pointer;
+  height: 200px;
+  border-radius: 20px;
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
 @media screen and (max-width:1000px){
   .back{
     top: 10px;
