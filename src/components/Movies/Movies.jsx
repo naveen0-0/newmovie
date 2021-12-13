@@ -21,14 +21,20 @@ export default function Movies() {
           Movies
         </div>
 
+        <details>
+          <summary>
+            Categories
+          </summary>
+          <div className={styles.tabs}>
+            <div className={tabIndex===0?styles.tabactive:styles.tab} onClick={() => {setTabIndex(0)}}>Popular</div>
+            <div className={tabIndex===1?styles.tabactive:styles.tab} onClick={() => {setTabIndex(1)}}>Top Rated</div>
+            <div className={tabIndex===2?styles.tabactive:styles.tab} onClick={() => {setTabIndex(2)}}>Now playing</div>
+            <div className={tabIndex===3?styles.tabactive:styles.tab} onClick={() => {setTabIndex(3)}}>Upcoming</div>
+            <div className={tabIndex===4?styles.tabactive:styles.tab} onClick={() => {setTabIndex(4)}}>Search</div>
+          </div>
+        </details>
 
-        <div className={styles.tabs}>
-          <div className={tabIndex===0?styles.tabactive:styles.tab} onClick={() => setTabIndex(0)}>Popular</div>
-          <div className={tabIndex===1?styles.tabactive:styles.tab} onClick={() => setTabIndex(1)}>Top Rated</div>
-          <div className={tabIndex===2?styles.tabactive:styles.tab} onClick={() => setTabIndex(2)}>Now playing</div>
-          <div className={tabIndex===3?styles.tabactive:styles.tab} onClick={() => setTabIndex(3)}>Upcoming</div>
-          <div className={tabIndex===4?styles.tabactive:styles.tab} onClick={() => setTabIndex(4)}>Search</div>
-        </div>
+
       </div>
       <div className={styles.content}>
         {tabs[tabIndex]}
