@@ -1,0 +1,76 @@
+.movies{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Code";
+}
+
+.tabtitle{
+  color: whitesmoke;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-indent: 30px;
+  margin: 10px 0px;
+}
+
+.tabs {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 20px;
+  
+}
+.tab {
+  background-color: #191a1f;
+  text-align: center;
+  color: rgb(170, 170, 170);
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 9999999px;
+  transition: all 0.4s ease;
+}
+
+.tabactive{
+  padding: 6px 14px;
+  text-align: center;
+  color: rgb(199, 202, 10);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+
+.content{
+  background-color: #191a1f;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  flex: 1;
+  color: rgb(126, 126, 126);
+}
+
+
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+summary{
+  color: rgb(173, 173, 173);
+  padding: 10px;
+  cursor: pointer;
+}

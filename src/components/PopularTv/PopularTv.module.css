@@ -1,0 +1,41 @@
+.movie_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 10px;
+}
+
+.movie{
+  margin: auto;
+  cursor: pointer;
+}
+
+.movie_img{
+  width:150px;
+  border-radius: 10px;
+}
+
+
+.main_movie{
+  margin: 0px 0px 20px;
+  cursor: pointer;
+}
+
+.main_movie_img{
+  width: 100%;
+  height: 400px;
+  object-fit:cover;
+  margin: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.loadingimg{
+  width: 60px;
+}
