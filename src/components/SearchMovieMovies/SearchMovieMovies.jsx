@@ -18,7 +18,7 @@ export default function SearchMovieMovies({ setIndex, setMovieId }) {
 
   const searchMovie = async e => {
     if(e.key === "Enter" && searchTerm.trim()){
-      let { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=f594e5214f71ed2cde6bdd2ec00f2282&query=${searchTerm}`)
+      let { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=f594e5214f71ed2cde6bdd2ec00f2282&query=${searchTerm.trim()}`)
       setResults(data.results)
       setSearchTerm("")
     }
@@ -32,7 +32,7 @@ export default function SearchMovieMovies({ setIndex, setMovieId }) {
           type="text" 
           placeholder='Search for a movie' 
           value={searchTerm} 
-          onChange={(e) => setSearchTerm(e.target.value.trim())} 
+          onChange={(e) => setSearchTerm(e.target.value)} 
           onKeyPress={searchMovie}
           className={styles.search_movie_input}
         />
