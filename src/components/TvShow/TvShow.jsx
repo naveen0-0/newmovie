@@ -5,7 +5,7 @@ import loadingimg from '../../images/loading.gif'
 import backimg from '../../images/back.png'
 import { format } from 'date-fns'
 
-export default function TvShow({ tvId, setTabIndex }) {
+export default function TvShow({ tvId, setTabIndex, setSeasonId }) {
 
   const [ tvShow, setTvShow ] = useState({});
   const [ loading, setLoading ] = useState(true)
@@ -66,7 +66,6 @@ export default function TvShow({ tvId, setTabIndex }) {
 
 
           <div className={styles.networks_title}>Networks</div>
-
           <div className={styles.networks}>
             {tvShow.networks.map((network, index) => <div key={index} className={styles.network}>
               <div className={styles.network_logo_container}>
@@ -78,10 +77,11 @@ export default function TvShow({ tvId, setTabIndex }) {
             </div>)}
           </div>
 
+
           <div className={styles.networks_title}>Seasons</div>
           <div className={styles.seasons}>
             {tvShow.seasons.map((season,index) => 
-            <div key={index} className={styles.season}>
+            <div key={index} className={styles.season} onClick={() => {setSeasonId(season.season_number);setTabIndex(2)}}>
               <div className={styles.poster_container}>
                 <img src={`https://image.tmdb.org/t/p/original${season.poster_path}`} alt="Season Poster" className={styles.poster}/>
               </div>
@@ -91,8 +91,8 @@ export default function TvShow({ tvId, setTabIndex }) {
             </div>)}
           </div>
 
-          <div className={styles.networks_title}>Last episode to air</div>
 
+          <div className={styles.networks_title}>Last episode to air</div>
           <div className={styles.last_episode_to_air}>
             <div className={styles.last_episode_img_container}>
               <img src={`https://image.tmdb.org/t/p/original${tvShow.last_episode_to_air.still_path}`} alt="Season Poster" className={styles.last_episode_img}/>

@@ -1,0 +1,100 @@
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.season{
+  position: relative;
+}
+
+.loadingimg{
+  width: 60px;
+}
+
+.poster_img{
+  width: 50%;
+  min-width: 200px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.back{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backimg{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.name,.episodestitle{
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.overview{
+  padding: 10px;
+}
+
+.episode{
+  padding: 10px;
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+}
+
+.episode:hover{
+  border: 1px solid #d1d1d1;
+}
+
+.episode_poster{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.episode_img{
+  border-radius: 5px;
+  width: 200px;
+}
+
+.name_and_overview{
+  padding: 10px;
+}
+
+.episode_name{
+  color: cornflowerblue;
+  margin-bottom: 10px; 
+}
+
+.episode_overview{
+  font-size: 16px;
+}
+
+@media screen and (max-width:1000px){
+  .episode{
+    flex-direction: column;
+  }
+
+  .episode_img{
+    width: 100%;
+  }
+}

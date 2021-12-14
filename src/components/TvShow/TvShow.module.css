@@ -142,6 +142,10 @@
   cursor: pointer;
 }
 
+.season:hover{
+  border: 1px solid #d1d1d1;
+}
+
 .poster{
   width: 180px;
   display: block;
