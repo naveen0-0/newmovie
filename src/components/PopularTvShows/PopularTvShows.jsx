@@ -5,6 +5,7 @@ import styles from './PopularTvShows.module.css'
 import PopularTv from '../PopularTv/PopularTv';
 import TvShow from '../TvShow/TvShow';
 import TvSeason from '../TvSeason/TvSeason';
+import TvEpisode from '../TvEpisode/TvEpisode';
 
 export default function PopularTvShows() {
   const [ tvId, setTvId ] = useState(null);
@@ -14,7 +15,8 @@ export default function PopularTvShows() {
   const components = [ 
                         <PopularTv setTvId={setTvId} setTabIndex={setTabIndex} />,
                         <TvShow tvId={tvId} setTabIndex={setTabIndex} setSeasonId={setSeasonId}/>,
-                        <TvSeason tvId={tvId} seasonId={seasonId} setTabIndex={setTabIndex}/>
+                        <TvSeason tvId={tvId} seasonId={seasonId} setTabIndex={setTabIndex} setEpisodeId={setEpisodeId}/>,
+                        <TvEpisode tvId={tvId} seasonId={seasonId} setTabIndex={setTabIndex} episodeId={episodeId}/>
                     ]
 
   return (

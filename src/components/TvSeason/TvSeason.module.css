@@ -4,14 +4,14 @@
   align-items: center;
   height: 50vh;
 }
+.loadingimg{
+  width: 60px;
+}
 
 .season{
   position: relative;
 }
 
-.loadingimg{
-  width: 60px;
-}
 
 .poster_img{
   width: 50%;

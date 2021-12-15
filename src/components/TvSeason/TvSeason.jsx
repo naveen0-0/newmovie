@@ -4,7 +4,7 @@ import axios from 'axios'
 import loadingimg from '../../images/loading.gif'
 import backimg from '../../images/back.png'
 
-export default function TvSeason({ tvId, seasonId, setTabIndex }) {
+export default function TvSeason({ tvId, seasonId, setTabIndex, setEpisodeId }) {
 
   const [ tvSeason, setTvSeason ] = useState({})
   const [ loading, setLoading ] = useState(true)
@@ -40,7 +40,7 @@ export default function TvSeason({ tvId, seasonId, setTabIndex }) {
         <div className={styles.episodestitle}>Episodes</div>
 
         <div className={styles.episodes}>
-          {tvSeason.episodes.map((episode,index) => <div key={index} className={styles.episode}>
+          {tvSeason.episodes.map((episode,index) => <div key={index} className={styles.episode} onClick={() => {setEpisodeId(episode.episode_number); setTabIndex(3)}}>
             <div className={styles.episode_poster}>
               <img 
                 src={`https://image.tmdb.org/t/p/original${episode.still_path}`} 
@@ -53,8 +53,6 @@ export default function TvSeason({ tvId, seasonId, setTabIndex }) {
             </div>
           </div>)}
         </div>
-
-
       </div>
     )}
   </div>

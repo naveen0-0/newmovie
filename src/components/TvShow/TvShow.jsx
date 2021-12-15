@@ -8,21 +8,30 @@ import { format } from 'date-fns'
 export default function TvShow({ tvId, setTabIndex, setSeasonId }) {
 
   const [ tvShow, setTvShow ] = useState({});
-  const [ loading, setLoading ] = useState(true)
+  const [ loading1, setLoading1 ] = useState(true)
+  const [ loading2, setLoading2 ] = useState(true)
+  const [ cast, setCast ] = useState({})
 
   const getTvShow =  async () => {
     let { data } = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}?api_key=f594e5214f71ed2cde6bdd2ec00f2282`)
     setTvShow(data)
-    setLoading(false)
+    setLoading1(false)
+  }
+  
+  const getCast = async () => {
+    let { data } = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=f594e5214f71ed2cde6bdd2ec00f2282`)
+    setCast(data)
+    setLoading2(false)
   }
 
   useEffect(() => {
     getTvShow()
+    getCast()
   },[])
 
   return (
     <div>
-      {loading?
+      {loading1?
       <div className={styles.loading}>
         <img src={loadingimg} alt="Loading" className={styles.loadingimg}/>
       </div> : (
@@ -105,6 +114,28 @@ export default function TvShow({ tvId, setTabIndex, setSeasonId }) {
             </div>
           </div>
 
+        </div>
+      )}
+
+      <div className={styles.crew_title}>Cast</div>
+      {loading2?(
+        <div className={styles.loading}>
+          <img src={loadingimg} alt="Loading" className={styles.loadingimg}/>
+        </div>
+      ):(
+        <div>
+          <div className={styles.crew_members}>
+            {cast.cast.map((crew_member, index) => <div key={index} className={styles.crew_member} onClick={() => console.log(crew_member.id)}>
+              <div className={styles.crew_profile_pic}>
+                {crew_member.profile_path?(
+                  <img src={`https://image.tmdb.org/t/p/original${crew_member.profile_path}`} alt="crew_profile_pic"  className={styles.crew_profile_pic_img} />
+                  ):<div className={styles.no_profile_pic}></div>}
+              </div>
+              <div className={styles.crew_name}>{crew_member.name || crew_member.original_name}</div>
+              <div className={styles.crew_character_title}>character</div>
+              <div className={styles.crew_job}>{crew_member.character}</div>
+            </div>)}
+          </div>
         </div>
       )}
     </div>

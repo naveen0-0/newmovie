@@ -1,0 +1,1 @@
+[x] TvShow, TvEpisode -> Redirect to personalities tab
