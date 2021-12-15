@@ -11,7 +11,6 @@ export default function TvEpisode({ tvId, seasonId, episodeId, setTabIndex }) {
   const getEpisode = async () => {
     let { data } = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/season/${seasonId}/episode/${episodeId}?api_key=f594e5214f71ed2cde6bdd2ec00f2282`);
     setEpisode(data)
-    console.log(data);
     setLoading(false)
   }
 

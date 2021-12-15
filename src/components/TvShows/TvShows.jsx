@@ -5,11 +5,12 @@ import styles from './TvShows.module.css'
 import PopularTvShows from '../PopularTvShows/PopularTvShows'
 import TopRatedTvShows from '../TopRatedTvShows/TopRatedTvShows'
 import OnTheAir from '../OnTheAir/OnTheAir'
+import SearchShows from '../SearchShows/SearchShows'
 
 export default function TvShows() {
 
 
-  const tabs = [ <PopularTvShows/>, <TopRatedTvShows/>, <OnTheAir/>, ];
+  const tabs = [ <PopularTvShows/>, <TopRatedTvShows/>, <OnTheAir/>, <SearchShows/> ];
   const [ tabIndex, setTabIndex ] = useState(0);
 
   return (
@@ -28,6 +29,7 @@ export default function TvShows() {
             <div className={tabIndex===0?styles.tabactive:styles.tab} onClick={() => {setTabIndex(0)}}>Popular</div>
             <div className={tabIndex===1?styles.tabactive:styles.tab} onClick={() => {setTabIndex(1)}}>Top Rated</div>
             <div className={tabIndex===2?styles.tabactive:styles.tab} onClick={() => {setTabIndex(2)}}>On The Air</div>
+            <div className={tabIndex===3?styles.tabactive:styles.tab} onClick={() => {setTabIndex(3)}}>Search</div>
           </div>
         </details>
 
