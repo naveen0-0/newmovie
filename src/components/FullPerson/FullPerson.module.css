@@ -1,0 +1,133 @@
+
+.content{
+  background-color: #191a1f;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  flex: 1;
+  color: rgb(126, 126, 126);
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+.details{
+  padding: 10px;
+}
+
+.image_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.back{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backimg{
+  width: 25px;
+}
+
+.image{
+  width: 200px;
+  border-radius: 10px;
+}
+
+.name{
+  font-size: 20px;
+  margin: 10px 0px;
+  color: cornflowerblue;
+}
+
+.place_of_birth{
+  margin: 10px 0px;
+  color: cornflowerblue;
+  font-size: 18px;
+}
+
+.biography{
+  line-height: 1.4em;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.loadingimg{
+  width: 60px;
+}
+
+.radio{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.radio_label{
+  margin: 20px 10px;
+  background: rgb(39, 39, 38);  
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 9999999px;
+  color: rgb(182, 182, 182);
+  text-align: center;
+  font-size: 14px;
+}
+
+.radio_input:checked + .radio_label{
+  color: rgb(39, 39, 38);
+  background:linear-gradient(to right, salmon,cornflowerblue)
+}
+
+.radio_input{
+  display: none;
+}
+
+.medias{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 10px;
+}
+
+.movie_image{
+  width: 100px;
+  border-radius: 10px;
+}
+
+.title{
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.empty{
+  background-color: tomato;
+  
+}

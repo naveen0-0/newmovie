@@ -1,0 +1,16 @@
+.banner{
+  color: whitesmoke;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-indent: 30px;
+  margin: 10px 0px;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Code";
+}
