@@ -32,8 +32,9 @@
 
 .sidebarlinktextactive{
   cursor: pointer;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
+  background: linear-gradient(to right,salmon,cornflowerblue);
+  border-radius: 9999999999px;
+  color: rgb(0, 0, 0);
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -44,6 +45,11 @@
   flex: 1;
   padding: 10px;
   text-align: center;
+}
+
+.sidebarlinktext:hover{
+  background-color: rgb(46, 46, 46);
+  border-radius: 9999999999px;
 }
 
 .close{

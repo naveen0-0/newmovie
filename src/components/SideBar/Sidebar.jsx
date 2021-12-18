@@ -21,9 +21,9 @@ export default function Sidebar({ componentIndex, setComponentIndex, setSidebarA
 
       <div className={styles.sidebarlinks}>
         <div className={styles.sidebarlink} >
-          <div>
+          {/* <div>
             <img src={dashboardimg} alt="Dashboard"/>
-          </div>
+          </div> */}
           <div className={componentIndex === 0 ? styles.sidebarlinktextactive : styles.sidebarlinktext} onClick={()=>{setComponentIndex(0);setSidebarActive(false)}}>
             Movies
           </div>
@@ -31,9 +31,9 @@ export default function Sidebar({ componentIndex, setComponentIndex, setSidebarA
 
 
         <div className={styles.sidebarlink} >
-          <div>
+          {/* <div>
             <img src={barimg} alt="Market Cap"/>
-          </div>
+          </div> */}
           <div className={componentIndex === 1 ? styles.sidebarlinktextactive : styles.sidebarlinktext} onClick={()=>{setComponentIndex(1);setSidebarActive(false)}}>
             Tv shows
           </div>
@@ -41,9 +41,9 @@ export default function Sidebar({ componentIndex, setComponentIndex, setSidebarA
 
 
         <div className={styles.sidebarlink} >
-          <div>
+          {/* <div>
             <img src={graphimg} alt="Compare"/>
-          </div>
+          </div> */}
           <div className={componentIndex === 2 ? styles.sidebarlinktextactive : styles.sidebarlinktext} onClick={()=>{setComponentIndex(2);setSidebarActive(false)}}>
             People
           </div>
