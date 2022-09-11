@@ -7,6 +7,21 @@
 .movie{
   margin: auto;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.smallTitle{
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .movie_img{
@@ -17,6 +32,22 @@
 .main_movie{
   margin: 0px 0px 20px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainTitle{
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 10px;
+  border-radius:10px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .main_movie_img{

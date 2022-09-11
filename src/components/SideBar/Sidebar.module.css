@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
 .sidebar{
   width: 200px;
   height: 100%;
@@ -10,7 +12,7 @@
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  font-family: "Roboto";
+  font-family: 'Fira Code', monospace;
   color: rgb(212, 212, 212);
   position: relative;
 }
@@ -19,7 +21,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: "Roboto";
+  font-family: 'Fira Code', monospace;
   margin: 20px 0px;
   padding: 10px;
   color: rgb(145, 145, 145);

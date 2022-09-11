@@ -27,6 +27,9 @@ export default function UpcomingMovies({ setIndex, setMovieId }) {
         <div>
           <div className={styles.main_movie} onClick={() => {setIndex(1);setMovieId(movies[0].id)}}>
             <img src={`https://image.tmdb.org/t/p/original${movies[0].backdrop_path}`} alt="Poster"  className={styles.main_movie_img}/>
+              <div className={styles.mainTitle}>
+                {movies[0].title}
+              </div>
           </div>
 
           <div className={styles.movie_container}>
@@ -35,6 +38,9 @@ export default function UpcomingMovies({ setIndex, setMovieId }) {
                 return(
                   <div key={index} className={styles.movie} onClick={() => {setIndex(1);setMovieId(movie.id)}} title={movie.title}>
                     <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="BackDrop" className={styles.movie_img}/>
+                    <div className={styles.smallTitle}>
+                      {movie.title}
+                    </div>
                   </div>
                 )
               }

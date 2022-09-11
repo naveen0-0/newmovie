@@ -22,6 +22,7 @@ export default function HomePage() {
       <div className={sidebaractive?styles.sidebar_container_active:styles.sidebar_container}>
         <Sidebar componentIndex={componentIndex} setComponentIndex={setComponentIndex} setSidebarActive={setSidebarActive}/>
       </div>
+      
       <div className={styles.selected_component_container}>
         {components[componentIndex]}
       </div>
